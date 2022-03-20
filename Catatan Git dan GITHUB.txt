@@ -1,0 +1,69 @@
+Tahapan dalam menggunakan git dan github :
+
+TAHAPAN AWAL (LINGKUNGAN PENGEMBANGAN)
+
+- kita harus menginstall dahulu git dan membuat akun github
+- Setelah install git, cara mengetahui git sudah terinstall adalah dengan command git pada terminal
+- jika sudah terinstall, maka terdapat pilihan perintah
+- tetapi jika terinstall dan tidak ada pilihan perintah, maka harus set terlebih dahulu environment variables.
+
+TAHAPAN PENGGUNAAN DARI GITHUB
+
+Cara buat repository:
+- klik tombol "+" muncul dropdown dan pilih new repository pada HOME
+- buatlah nama repository beserta deskripsinya pada kolom nama dan kolom deskripsi
+- centang README file (opsional)
+- Klik Create Repository
+
+Cara buat file baru:
+- Create New File
+
+Cara menambah file baru :
+- Ke HOME , pilih repositories
+- Pilih Repository yang ingin kamu tambah file
+- Klik Add Files dan Klik Create New Files / Upload Files
+
+
+
+TAHAPAN PENGGUNAAN DARI GIT
+
+Cara meng-clone repository dari GITHUB:
+- Pilih folder yang ingin kamu tempatkan repo dari github
+- Bukalah github, pilih repository yg ingin diclone, lalu klik Code dan Copy HTTPS-nya
+- Buka terminal masuk ke folder yg ingin ditempatkan repo dari github
+- Jika di dalam folder yg telah dipilih terdapat folder baru dimana folder baru tersebut menjadi folder yg ingin ditempatkan repo github
+  maka, jalankan perintah git init pada terminal
+- Lalu, jalankan perintah git clone salinan https pada terminal
+
+Cara Meng-Upload file dari lokal ke repo GITHUB:
+- Masuk ke folder yang terdapat file yg ingin kita kirim ke repo github
+- Jalankan perintah git add pada folder tersebut dalam terminal (arahkan terminal pada lokasi tersebut)
+  git add namafile -> hanya file tertentu saja
+  git add . -> itu semua file
+  git add *.format file -> semua file dengan ekstensi yg sama yang ditentukan
+- Jalankan perintah git status (perintah ini untuk melihat informasi mengenai file apa saja yg telah masuk dan belum masuk pada stage)
+- Jalankan perintah git commit -m "Pesan yg ingin dikirimkan" (perintah untuk membuat commit/informasi tentang perubahan apa saja yg terjadi)
+  apabila muncul Author identity unknown, maka masukkan perintah yg ditampilkan pada terminal.
+- Apabila kita telah memiliki SSH Keygen, maka jalankan perintah git push origin master/main/branch (pilih salah satu sesuai dengan reponya)
+
+Cara Membuat SSH Keygen:
+- Buka terminal, lalu arahkan ke folder home dengan ketik cd ~
+- Jalankan perintah ssh-keygen -t rsa -b 4096 -C "email yg ada di github"
+- Muncul perintah untuk memasukkan nama file (by default id_rsa dan ada di folder .ssh)
+- Muncul perintah untuk memasukkan passphrase (password ketika membuka file .pub), jika tidak ingin ada password langsung enter saja  
+- Jika file tidak beri nama pada tahapan ketiga, maka jalankan perintah cd .ssh lalu jalankan perintah selanjutnya
+  Jika diberi nama, maka langsung jalankan perintah selanjutnya
+- ketikkan cat namafile.pub, copy SSH yang tampil pada terminal dengan ctrl+shift+c
+- Masuk ke akun github kalian, lalu pilih settings, kemudian pilih SSH and GPG Keys
+- Pilih New SSH Keys , beri nama dan paste SSH yang telah disalin dari terminal.
+
+Cara mengganti branch :
+- Jalankan Perintah git branch
+
+
+Cara mengetahui adanya git atau tidak yaitu
+dengan menuliskan git pada cmd atau windows powershell
+jika ada maka akan muncul beberapa command dari gitnya
+atau dengan menuliskan git --version (jika ada muncul versionnya)
+
+
